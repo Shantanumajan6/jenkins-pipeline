@@ -1,0 +1,24 @@
+pipeline {
+agent {
+
+node {
+			label 'linux-slave'
+			customWorkspace '/data/pipeline'
+
+}
+
+}
+
+stages {
+
+	stage ('hello'){
+	
+		steps {
+				echo "hello-world"
+		}
+	
+	}
+
+}
+
+}

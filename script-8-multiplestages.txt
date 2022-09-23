@@ -1,0 +1,39 @@
+pipeline {
+agent {
+label{
+		label "built-in"
+		customWorkspace "/data/pipeline"
+}
+}
+
+stages {
+
+		stage ("create-file-1"){
+		
+		steps {
+				
+		sh "touch file1"
+			
+		
+		}
+	
+		}
+
+		stage ("create-file-2"){
+		
+		steps {
+		dir ("/data/wsp2"){
+		
+		sh "touch file1"
+		
+		}
+		
+		}
+	
+		}
+
+
+}
+
+
+}
